@@ -2,4 +2,4 @@
 ## American University | Spring 2024
 ### *Professor Mike Treanor*
 
-[Syllabus]("syllabus.html")
+[Syllabus](syllabus.html)
