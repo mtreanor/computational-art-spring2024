@@ -1,1 +1,4 @@
-theme: jekyll-theme-slate
+theme: jekyll-theme-modernist
+title: Computational Art (CSC 496/696-002)
+description: American University | Spring 2023
+show_downloads: false
