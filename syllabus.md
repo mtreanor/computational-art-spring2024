@@ -14,4 +14,24 @@ This course surveys a variety of tools and techniques used for creating artworks
 
 ![The test image](images/test.png)
 
-<img src="./images/test.png" width="100">
+<!-- <img src="./images/test.png" width="100"> -->
+
+| Week | Topic | Assignments |
+| :---: | --- | --- |
+| 1 | p5 |  |
+| 2 | p5 |  |
+| 3 | p5 |  |
+| 4 | p5 |  |
+| 5 | p5 |  |
+| 6 | p5 |  |
+| 7 | p5 |  |
+| 8 | p5 |  |
+| 9 | music |  |
+| 10 | music |  |
+| 11 | music |  |
+| 12 | music |  |
+| 13 | games |  |
+| 14 | games |  |
+| 15 | games |  |
+| 16 | games |  |
+| 17 | games |  |
