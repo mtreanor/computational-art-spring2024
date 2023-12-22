@@ -18,20 +18,19 @@ This course surveys a variety of tools and techniques used for creating artworks
 
 | Week | Topic | Assignments |
 | :---: | --- | --- |
-| 1 | p5 |  |
-| 2 | p5 |  |
-| 3 | p5 |  |
-| 4 | p5 |  |
+| 1 | p5 - Welcome to Javascript and p5 |  |
+| 2 | p5 - Basics physics |  |
+| 3 | p5 - Vectors and forces |  |
+| 4 | p5 - |  |
 | 5 | p5 |  |
-| 6 | p5 |  |
-| 7 | p5 |  |
-| 8 | p5 |  |
-| 9 | music |  |
-| 10 | music |  |
-| 11 | music |  |
-| 12 | music |  |
-| 13 | games |  |
-| 14 | games |  |
-| 15 | games |  |
-| 16 | games |  |
-| 17 | games |  |
+| 6 | music - DAWs and Synth Basics |  |
+| 7 | music - Orca |  |
+| 8 | music - VCV Rack |  |
+| 9 | music - VCV Rack and Teletype |  |
+| 10 | games - Intro to PICO-8 |  |
+| 11 | games - PICO-8 |  |
+| 12 | games - PICO-8 |  |
+| 13 | final | |
+| 14 | final | |
+| 15 | final | |
+| 16 | final | |
