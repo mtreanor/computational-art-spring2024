@@ -40,7 +40,8 @@ This course surveys a variety of tools and techniques used for creating artworks
 | p5 - [Physics (vectors and forces)](https://natureofcode.com/) |
 | p5 - [Autonomous Agents](https://natureofcode.com/) |
 | p5 - [Graphics processing](https://natureofcode.com/) |
-| visual art - [Context Free Art](https://www.contextfreeart.org/) |
+| livecoding - TBD (Hydra?) |
+| images - [Context Free Art](https://www.contextfreeart.org/) |
 | text - [RiTa](https://rednoise.org/rita/) (NLP/NLG) |
 | text - [Tracery](https://github.com/galaxykate/tracery) (NLG) |
 | music - [VCV Rack](https://vcvrack.com/Rack) |
