@@ -1,0 +1,3 @@
+# Assignment 1: Welcome to p5 and web development
+
+Here you will learn to make p5 projects....
