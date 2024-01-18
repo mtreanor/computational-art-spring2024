@@ -28,6 +28,7 @@ This course surveys a variety of tools and techniques used for creating artworks
 | 1. [Welcome to p5 and web development](./assignments/p5-setup.html) | 1-22-24 |
 
 ## Examples
+
 | Date | Topic | Example |
 | --- | --- | --- |
 | Sometime ago | p5 test | [code](./examples/test) |
@@ -38,13 +39,13 @@ This course surveys a variety of tools and techniques used for creating artworks
 | --- |
 | Digital media vs computational media |
 | p5 - Javascript and p5 basics |
-| p5 - Physics |
-| p5 - Agents |
-| p5 - Graphics processing |
-| visual art - Context Free |
-| text - RiTa (NLP/NLG) |
-| text - Tracery (NLG) |
-| music - VCV Rack |
-| music - Orca |
-| music - Teletype |
-| games - PICO-8 (Fantasy Console) |
+| p5 - [Physics (vectors and forces)](https://natureofcode.com/) |
+| p5 - [Autonomous Agents](https://natureofcode.com/) |
+| p5 - [Graphics processing](https://natureofcode.com/) |
+| visual art - [Context Free Art](https://www.contextfreeart.org/) |
+| text - [RiTa](https://rednoise.org/rita/) (NLP/NLG) |
+| text - [Tracery](https://github.com/galaxykate/tracery) (NLG) |
+| music - [VCV Rack](https://vcvrack.com/Rack) |
+| music - [Orca](https://100r.co/site/orca.html) |
+| music - [Teletype](https://library.vcvrack.com/monome/teletype) |
+| games - [PICO-8](https://www.lexaloffle.com/pico-8.php) (Fantasy Game Console) |
