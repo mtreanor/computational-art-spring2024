@@ -33,8 +33,6 @@ This course surveys a variety of tools and techniques used for creating artworks
 | --- | --- | --- |
 | Sometime ago | p5 test | [code](./examples/test) |
 
-## Potetntial Topics 
-
 | Potential Topics |
 | --- |
 | Digital media vs computational media |
