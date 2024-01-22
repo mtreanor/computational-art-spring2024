@@ -31,7 +31,7 @@ This course surveys a variety of tools and techniques used for creating artworks
 
 | Date | Topic | Example |
 | --- | --- | --- |
-| 1-22-24 | Introduction to p5 and classes | [code](./examples/1-22-24) |
+| 1-22-24 | Introduction to p5 and classes | [view](./examples/1-22-24) [code](./examples/1-22-24/sketch.js) |
 
 | Potential Topics |
 | --- |
