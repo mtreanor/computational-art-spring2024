@@ -35,7 +35,7 @@ p5 is a javascript "library" that we will be using for roughly the first half of
 1. Inside that folder is a folder named `empty-example`. Rename that to `01_portrait`.
 1. Delete the file named `.gitignore` inside of the `01_portrait` folder. If you have hidden files hidden on your computer (which most of you probably do), you will need to use the file viewer inside of Visual Studio Code to see and then delete the file. **This is important**
 
-## Assignment
+## Creative Assignment
 
 Finally, for your creative assignment, use p5 to create an animated portrait of a friend or yourself. This should be pretty abstract. In addition to using a bunch of p5 functions, challenge yourself to make use of classes and arrays.
 
