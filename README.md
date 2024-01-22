@@ -25,13 +25,13 @@ This course surveys a variety of tools and techniques used for creating artworks
 
 | Assignment | Due |
 | --- | --- |
-| 1. [Welcome to p5 and web development](./assignments/p5-setup.html) | 1-22-24 |
+| 1. [Welcome to p5 and web development](./assignments/p5-setup.html) | 1-29-24 |
 
 ## Examples
 
 | Date | Topic | Example |
 | --- | --- | --- |
-| Sometime ago | p5 test | [code](./examples/test) |
+| 1-22-24 | Introduction to p5 and classes | [code](./examples/1-22-24) |
 
 | Potential Topics |
 | --- |

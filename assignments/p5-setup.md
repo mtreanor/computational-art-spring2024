@@ -1,3 +1,63 @@
-# Assignment 1: Welcome to p5 and web development
+# Assignment 1: Github Configuration, and Welcome to p5/web development!
 
-Here you will learn to make p5 projects....
+## Github
+1. Go to [github.com](https://github.com/) and create an account
+1. Add your Github username to the Google Form linked on the course [Canvas](https://canvas.american.edu) page (I'd link it directly here, but this website is public).
+1. Download and install [Github Desktop](https://desktop.github.com/)
+1. Log into Github desktop
+
+## Create your repository for the class
+1. Open Github desktop and log in (you may need to go to Preferences->Accounts)
+1. Add a repository for the exercise
+    - Name the repository exactly "computational-art-spring2024" **Make 100% certain you are using that exact name - all lowercase**
+    - Make the repository public by unchecking "Keep this repository private"
+    - For Local Path put it wherever you like to keep your class files on your computer
+    - Ignore the other setting options
+    - Check "Initialize this repository with a README"
+    - Click "Create Repository"
+1. Locate the repository folder on your computer, and a folder named `assignments`.
+1. Commit your changes to the repository "locally" by typing a brief summary of what you did in the Summary field (e.g. "Created the repository for comp-art" or something) and click "Commit to master" (this should be on the bottom left of the window).
+1. On the top/middle region of the screen, click "Publish repository"
+1. In the future, in order to upload your assignments to Github you will go through a similar process as what you did in the last two steps. You will need to first "commit" your changes, and then you will press the button labeled "Push origin" (located at the same place as the "Publish repository" button).
+
+## Setting up your Github repository for submitting work
+- Go to your web browser, log into github.com, and find the repository you just created and published (click the repositories tab).
+- Click the "Settings" tab (located in the top middle of the window). Then, click the "Pages" button on the left middle of that window. In that window, under the label that says "Branch" there will be a dropdown that reads "None". Select "main" and click the save button. The purpose of this is to enable your github repository to provide "static hosting". This means that you can post your javascript/html projects and have anyone on the web access them as webpages.
+- NOTE: If you get something that says "Upgrade or make this repository public to enable Pages", this means that you did not uncheck the box that read "keep it private" when you published your repository. To fix this, you will need to click the "General button" (on the left side of the screen), then scroll down to the bottom of the page where it says "Danger Zone" and click the "Change visibility" button. Follow the steps to make your repository "public", and then try this step again.
+
+## p5
+
+p5 is a javascript "library" that we will be using for roughly the first half of this class. To create a p5 project, you are essentially creating a website. A website is an html file, and javascript is the programming language of web browsers, so the structure of a p5 project is 1. an html page that loads the p5 library and your javascript code and 2. all of your javascript code which makes calls to p5 to draw stuff on the website. For now, to create your first p5 project, follow these steps:
+
+1. Download the [p5 library (click here to download)](https://github.com/processing/p5.js/releases/download/v1.9.0/p5.zip).
+1. Unzip, and then place this folder inside of your local "computational-art-spring2024" folder/respository on your computer.
+1. 
+1. Inside folder named "p5" is a folder named "empty-example". Rename that to "test" (because all we are trying to do at this point is 'test' that you have made all this work).
+1. Edit the "sketch.js" file inside of the "test" folder. See below in the "your first p5 sketch" section.
+
+## Your first p5 sketch
+
+To begin with, edit the "sketch.js" file to have the following code:
+
+```
+function setup() {
+  createCanvas(600, 600);
+}
+
+function draw() {
+  background(127);
+
+  fill(255);
+  ellipse(mouseX, mouseY, 50, 50);
+}
+```
+
+Now, commit and push your changes to your repository in Github Desktop.
+
+If everything worked, you should be able to go to:
+
+```
+YOUR_GIHUB_USERNAME.github.io/computational-art-spring2024/p5/test
+```
+
+If everything worked correctly, the webpage you see when you go to that link should have a square moving around with your mouse. If that isn't happening, take a closer look at all of the above instructions. If you still have problems after carefully reviewing everything, send me an email or come to office hours.
