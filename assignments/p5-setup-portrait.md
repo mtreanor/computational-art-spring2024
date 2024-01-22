@@ -1,4 +1,4 @@
-# Assignment 1: Github Configuration, and Welcome to p5/web development!
+# Assignment 1: Github Configuration, and a p5 Portrait
 
 ## Github
 1. Go to [github.com](https://github.com/) and create an account
@@ -25,39 +25,28 @@
 - Click the "Settings" tab (located in the top middle of the window). Then, click the "Pages" button on the left middle of that window. In that window, under the label that says "Branch" there will be a dropdown that reads "None". Select "main" and click the save button. The purpose of this is to enable your github repository to provide "static hosting". This means that you can post your javascript/html projects and have anyone on the web access them as webpages.
 - NOTE: If you get something that says "Upgrade or make this repository public to enable Pages", this means that you did not uncheck the box that read "keep it private" when you published your repository. To fix this, you will need to click the "General button" (on the left side of the screen), then scroll down to the bottom of the page where it says "Danger Zone" and click the "Change visibility" button. Follow the steps to make your repository "public", and then try this step again.
 
-## p5
+## p5 setup
 
 p5 is a javascript "library" that we will be using for roughly the first half of this class. To create a p5 project, you are essentially creating a website. A website is an html file, and javascript is the programming language of web browsers, so the structure of a p5 project is 1. an html page that loads the p5 library and your javascript code and 2. all of your javascript code which makes calls to p5 to draw stuff on the website. For now, to create your first p5 project, follow these steps:
 
-1. Download the [p5 library (click here to download)](https://github.com/processing/p5.js/releases/download/v1.9.0/p5.zip).
+1. Download the [p5 library (click here to download)](https://github.com/processing/p5.js/releases/download/v1.9.0/p5.zip). 
 1. Unzip, and then place this folder inside of your local "computational-art-spring2024" folder/respository on your computer.
-1. 
-1. Inside folder named "p5" is a folder named "empty-example". Rename that to "test" (because all we are trying to do at this point is 'test' that you have made all this work).
-1. Edit the "sketch.js" file inside of the "test" folder. See below in the "your first p5 sketch" section.
+1. Rename the `p5` folder to `assignments`. 
+1. Inside that folder is a folder named `empty-example`. Rename that to `01_portrait`.
+1. Delete the file named `.gitignore` inside of the `01_portrait` folder. If you have hidden files hidden on your computer (which most of you probably do), you will need to use the file viewer inside of Visual Studio Code to see and then delete the file. **This is important**
 
-## Your first p5 sketch
+## Assignment
 
-To begin with, edit the "sketch.js" file to have the following code:
+Finally, for your creative assignment, use p5 to create an animated portrait of a friend or yourself. This should be pretty abstract.
 
-```
-function setup() {
-  createCanvas(600, 600);
-}
+Write your code inside of the `sketch.js` file inside of the `01_portrait` folder, and run your code by opening up the `index.html` file using a web browser.
 
-function draw() {
-  background(127);
+When you are done, commit and push your changes to your repository in Github Desktop.
 
-  fill(255);
-  ellipse(mouseX, mouseY, 50, 50);
-}
-```
-
-Now, commit and push your changes to your repository in Github Desktop.
-
-If everything worked, you should be able to go to:
+If everything worked, you should be able to see your assignment by going to this link:
 
 ```
-YOUR_GIHUB_USERNAME.github.io/computational-art-spring2024/p5/test
+YOUR_GIHUB_USERNAME.github.io/computational-art-spring2024/assignments/01_portrait
 ```
 
-If everything worked correctly, the webpage you see when you go to that link should have a square moving around with your mouse. If that isn't happening, take a closer look at all of the above instructions. If you still have problems after carefully reviewing everything, send me an email or come to office hours.
+If this doesn't work, take a closer look at all of the above instructions. If you still have problems after carefully reviewing everything, send me an email or come to office hours.
