@@ -27,12 +27,10 @@
 
 ## p5 setup
 
-p5 is a javascript "library" that we will be using for roughly the first half of this class. To create a p5 project, you are essentially creating a website. A website is an html file, and javascript is the programming language of web browsers, so the structure of a p5 project is 1. an html page that loads the p5 library and your javascript code and 2. all of your javascript code which makes calls to p5 to draw stuff on the website. For now, to create your first p5 project, follow these steps:
-
 1. Download the [p5 library (click here to download)](https://github.com/processing/p5.js/releases/download/v1.9.0/p5.zip). 
 1. Unzip, and then place this folder inside of your local `computational-art-spring2024` folder/respository on your computer.
 1. Rename the `p5` folder to `assignments`. 
-1. Inside that folder is a folder named `empty-example`. Rename that to `01_portrait`.
+1. Inside of that folder is a folder named `empty-example`. Rename that to `01_portrait`.
 1. Delete the file named `.gitignore` inside of the `01_portrait` folder. If you have hidden files hidden on your computer (which most of you probably do), you will need to use the file viewer inside of Visual Studio Code to see and then delete the file. **This is important**
 
 ## Creative Assignment
