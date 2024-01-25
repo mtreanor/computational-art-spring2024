@@ -25,7 +25,7 @@ This course surveys a variety of tools and techniques used for creating artworks
 
 | Assignment | Due |
 | --- | --- |
-| 1. [Github Configuration, and a p5 Portrait](./assignments/p5-setup-portrait.html) | 1-29-24 |
+| 1. [Github Configuration, and a work of abstract art using p5](./assignments/p5-setup-abstract.html) | 1-29-24 |
 
 ## Examples
 

@@ -1,4 +1,4 @@
-# Assignment 1: Github Configuration, and a p5 Portrait
+# Assignment 1: Github Configuration, and a work of abstract art using p5
 
 ## Github
 1. Go to [github.com](https://github.com/) and create an account
@@ -30,21 +30,21 @@
 1. Download the [p5 library (click here to download)](https://github.com/processing/p5.js/releases/download/v1.9.0/p5.zip). 
 1. Unzip, and then place this folder inside of your local `computational-art-spring2024` folder/respository on your computer.
 1. Rename the `p5` folder to `assignments`. 
-1. Inside of that folder is a folder named `empty-example`. Rename that to `01_portrait`.
-1. Delete the file named `.gitignore` inside of the `01_portrait` folder. If you have hidden files hidden on your computer (which most of you probably do), you will need to use the file viewer inside of Visual Studio Code to see and then delete the file. **This is important**
+1. Inside of that folder is a folder named `empty-example`. Rename that to `01_abstract`.
+1. Delete the file named `.gitignore` inside of the `01_abstract` folder. If you have hidden files hidden on your computer (which most of you probably do), you will need to use the file viewer inside of Visual Studio Code to see and then delete the file. **This is important**
 
 ## Creative Assignment
 
-Finally, for your creative assignment, use p5 to create an animated portrait of a friend or yourself. This should be pretty abstract. In addition to using a bunch of p5 functions, challenge yourself to make use of classes and arrays.
+Finally, for your creative assignment, use p5 to create an work of abstract art. Given that we are new to using p5 and making computational visuals, I expect your project to be more like [abstract expressionism](https://en.wikipedia.org/wiki/Abstract_expressionism) than a pixar movie or something. In addition to using a bunch of p5 functions, challenge yourself to make use of classes and arrays.
 
-Write your code inside of the `sketch.js` file inside of the `01_portrait` folder, and run your code by opening up the `index.html` file using a web browser.
+Write your code inside of the `sketch.js` file inside of the `01_abstract` folder, and run your code by opening up the `index.html` file using a web browser.
 
 When you are done, commit and push your changes to your repository in Github Desktop.
 
 If everything worked, you should be able to see your assignment by going to this link:
 
 ```
-YOUR_GIHUB_USERNAME.github.io/computational-art-spring2024/assignments/01_portrait
+YOUR_GIHUB_USERNAME.github.io/computational-art-spring2024/assignments/01_abstract
 ```
 
 If this doesn't work, take a closer look at all of the above instructions. If you still have problems after carefully reviewing everything, send me an email or come to office hours.

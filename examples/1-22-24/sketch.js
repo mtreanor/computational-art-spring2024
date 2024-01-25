@@ -56,6 +56,7 @@ class Thing {
     fill(this.hue % 360, saturation, 100);
     circle(this.position.x, this.position.y, 100);
   }
+
 }
 
 
