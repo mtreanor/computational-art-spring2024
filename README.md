@@ -32,7 +32,7 @@ This course surveys a variety of tools and techniques used for creating artworks
 | Date | Topic | Example |
 | --- | --- | --- |
 | 1-22-24 | Introduction to p5 and classes | [view](./examples/1-22-24) / [code](https://github.com/mtreanor/computational-art-spring2024/blob/main/examples/1-22-24/sketch.js) |
-| 1-22-24 | Introduction to p5 and classes | [view](./examples/1-25-24) / [code](https://github.com/mtreanor/computational-art-spring2024/blob/main/examples/1-25-24/sketch.js) |
+| 1-25-24 | Arrays of Objects, movement with vectors | [view](./examples/1-25-24) / [code](https://github.com/mtreanor/computational-art-spring2024/blob/main/examples/1-25-24/sketch.js) |
 
 | Potential Topics |
 | --- |
