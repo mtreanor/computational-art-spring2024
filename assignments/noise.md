@@ -1,6 +1,6 @@
 # Assignment 2: Noise
 
------------------------
+Create a piece of visual art that makes creative use of Perlin noise!
 
 ## Turning in your assignment
 
