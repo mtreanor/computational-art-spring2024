@@ -26,6 +26,7 @@ This course surveys a variety of tools and techniques used for creating artworks
 | Assignment | Due |
 | --- | --- |
 | 1. [Github Configuration, and a work of abstract art using p5](./assignments/p5-setup-abstract.html) | 1-29-24 |
+| 2. [Noise](./assignments/noise.html) | 2-8-24 |
 
 ## Examples
 
@@ -34,6 +35,7 @@ This course surveys a variety of tools and techniques used for creating artworks
 | 1-22-24 | Introduction to p5 and classes | [view](./examples/1-22-24) / [code](https://github.com/mtreanor/computational-art-spring2024/blob/main/examples/1-22-24/sketch.js) |
 | 1-25-24 | Arrays of Objects, vectors, gravity, using array index to parameterize an object | [view](./examples/1-25-24) / [code](https://github.com/mtreanor/computational-art-spring2024/blob/main/examples/1-25-24/sketch.js) |
 | 2-1-24 | Some examples of p5 functions. Perlin Noise pt. 1 | [view](./examples/2-1-24) / [code](https://github.com/mtreanor/computational-art-spring2024/blob/main/examples/2-1-24/sketch.js) |
+| 2-5-24 | Perlin Noise pt. 2, and map() | [view](./examples/2-5-24) / [code](https://github.com/mtreanor/computational-art-spring2024/blob/main/examples/2-5-24/sketch.js) |
 
 | Potential Topics |
 | --- |
