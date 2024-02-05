@@ -1,6 +1,6 @@
 # Assignment 2: Noise
 
-Create a piece of visual art that makes creative use of Perlin noise and the map function!
+Create a piece of visual art that makes creative use of [Perlin noise](https://p5js.org/reference/#/p5/noise) and the [map](https://p5js.org/reference/#/p5/map) function!
 
 ## Turning in your assignment
 
