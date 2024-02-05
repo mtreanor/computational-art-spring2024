@@ -12,4 +12,4 @@ If everything worked, you should be able to see your assignment by going to this
 YOUR_GIHUB_USERNAME.github.io/computational-art-spring2024/assignments/02_noise
 ```
 
-If this doesn't work, take a close look at the [setup assignment]("./p5-setup-abstract.html").
+If this doesn't work, take a close look at the [setup assignment](./p5-setup-abstract.html).
