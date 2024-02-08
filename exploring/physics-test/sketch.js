@@ -105,7 +105,6 @@ class Dot {
       dsq = constrain(dsq, 5, 50);
       let strength = G / dsq;
       force.setMag(strength);
-      // force.mult(-1);
       this.addForce(force);
     }
 
