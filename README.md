@@ -39,6 +39,7 @@ This course surveys a variety of tools and techniques used for creating artworks
 | 2-8-24 | Polar coordinates, spirals, noise, sliders | [view](./examples/2-8-24) / [code](https://github.com/mtreanor/computational-art-spring2024/blob/main/examples/2-8-24/sketch.js) |
 
 ## Potential Topics
+
 |  |
 | --- |
 | Digital media vs computational media |
