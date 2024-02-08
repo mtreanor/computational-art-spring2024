@@ -40,7 +40,6 @@ This course surveys a variety of tools and techniques used for creating artworks
 
 ## Potential Topics
 
-|  |
 | --- |
 | Digital media vs computational media |
 | p5 - [Javascript and p5 basics](https://p5js.org/get-started/) |
