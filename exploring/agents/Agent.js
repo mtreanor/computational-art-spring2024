@@ -23,27 +23,27 @@ class Agent {
         this.addForce(steer);
     }
 
-    // edges() {
-    //     // bounce off the edges
-    //     if (this.pos.x < 0 || this.pos.x > width) {
-    //         this.vel.x *= -1;
-    //         this.pos.x += this.vel.x;
-    //     }
-    //     if (this.pos.y < 0 || this.pos.y > height) {
-    //         this.vel.y *= -1;
-    //         this.pos.y += this.vel.y;
-    //     }
-    // }
+    edges() {
+        // bounce off the edges
+        if (this.pos.x < 0 || this.pos.x > width) {
+            this.vel.x *= -1;
+            this.pos.x += this.vel.x;
+        }
+        if (this.pos.y < 0 || this.pos.y > height) {
+            this.vel.y *= -1;
+            this.pos.y += this.vel.y;
+        }
+    }
 
     update() {
         // this.addForce(gravity);
-        this.driveToTarget();
+        // this.driveToTarget();
 
         this.vel.add(this.acc);
         this.vel.limit(2);
         this.pos.add(this.vel);
 
-        // this.edges();
+        this.edges();
 
         this.acc.set(0, 0);
     }
