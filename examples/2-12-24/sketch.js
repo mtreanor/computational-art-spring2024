@@ -1,7 +1,7 @@
 let dots = [];
-let numDots = 20;
+let numDots = 40;
 
-let gravitationalConstant = 0.0001;
+let gravitationalConstant = 0.00001;
 let downwardGravity;
 let wind;
 
