@@ -39,6 +39,7 @@ This course surveys a variety of tools and techniques used for creating artworks
 | 2-5-24 | Perlin Noise pt. 2, and map() | [view](./examples/2-5-24) / [code](https://github.com/mtreanor/computational-art-spring2024/blob/main/examples/2-5-24/sketch.js) |
 | 2-8-24 | Polar coordinates, spirals, noise, sliders | [view](./examples/2-8-24) / [code](https://github.com/mtreanor/computational-art-spring2024/blob/main/examples/2-8-24/sketch.js) |
 | 2-12-24 | Dots with Gravity, arrays of objects, Physics simulation | [view](./examples/2-12-24) / [code](https://github.com/mtreanor/computational-art-spring2024/blob/main/examples/2-12-24/) |
+| 2-15-24 | Dots in water (drag force) and spring forces! | [view](./examples/2-15-24) / [code](https://github.com/mtreanor/computational-art-spring2024/blob/main/examples/2-15-24/) |
 
 ## Potential Topics
 
