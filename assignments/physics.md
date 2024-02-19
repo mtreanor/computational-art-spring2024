@@ -11,6 +11,8 @@ Now that we are all set up with a basic physics simulation, we can do so much! F
 
 You can pretty much whatever you want, but as a technical requirement, you must make use of forces and have some physics simulation.
 
+**Name your project folder `03_physics`.**
+
 Also, try to mostly work within the limitations of what we've covered in class.
 
 ## Turning in your assignment
