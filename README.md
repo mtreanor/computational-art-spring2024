@@ -43,7 +43,7 @@ This course surveys a variety of tools and techniques used for creating artworks
 | 2-12-24 | Dots with Gravity, arrays of objects, Physics simulation | [view](./examples/2-12-24) / [code](https://github.com/mtreanor/computational-art-spring2024/blob/main/examples/2-12-24/) |
 | 2-15-24 | Dots in water (drag force) and spring forces! | [view](./examples/2-15-24) / [code](https://github.com/mtreanor/computational-art-spring2024/blob/main/examples/2-15-24/) |
 | 2-19-24 | Particle Systems | [view](./examples/2-19-24) / [code](https://github.com/mtreanor/computational-art-spring2024/blob/main/examples/2-19-24/) |
-| 2-26-24 | Grid | [view](./examples/2-19-24) / [code](https://github.com/mtreanor/computational-art-spring2024/blob/main/examples/2-26-24/) |
+| 2-26-24 | Grid | [view](./examples/2-26-24) / [code](https://github.com/mtreanor/computational-art-spring2024/blob/main/examples/2-26-24/) |
 
 ## Potential Topics
 

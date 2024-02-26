@@ -6,18 +6,15 @@ let cellHeight;
 function setup() {
   createCanvas(600, 400);
   colorMode(HSB);
-  
-  noStroke();
+
 
   cellWidth = width / numCellsWidth;
   cellHeight = height / numCellsHeight;
-    
-  drawGrid();
 }
 
 function draw() {
-  // background(0, 0, 100);
-
+  background(0, 0, 100);
+  drawGrid()
 }
 
 function drawGrid() {
