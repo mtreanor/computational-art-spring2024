@@ -72,8 +72,10 @@ class Dot {
         this.vel.limit(5); // This limits the magnitude of the velocity vector
         this.pos.add(this.vel); // Apply velocity to position
 
+        this.vel.mult(0.99);
+
         // Keep the dot on the screen by "wrapping" the position
-        this.wrap();
+        // this.wrap();
 
         // Reset the acceleration back to (0,0). This is important because
         // forces need to be continually applied in order to affect velocity.

@@ -29,6 +29,7 @@ This course surveys a variety of tools and techniques used for creating artworks
 | 2. [Noise](./assignments/noise.html) | 2-8-24 |
 | 3. [Physics](./assignments/physics.html) | 2-19-24 |
 | 4. [Particles](./assignments/particles.html) | 2-26-24 |
+| 5. [Grid](./assignments/grid.html) | 2-29-24 |
 
 ## Examples
 
@@ -42,6 +43,7 @@ This course surveys a variety of tools and techniques used for creating artworks
 | 2-12-24 | Dots with Gravity, arrays of objects, Physics simulation | [view](./examples/2-12-24) / [code](https://github.com/mtreanor/computational-art-spring2024/blob/main/examples/2-12-24/) |
 | 2-15-24 | Dots in water (drag force) and spring forces! | [view](./examples/2-15-24) / [code](https://github.com/mtreanor/computational-art-spring2024/blob/main/examples/2-15-24/) |
 | 2-19-24 | Particle Systems | [view](./examples/2-19-24) / [code](https://github.com/mtreanor/computational-art-spring2024/blob/main/examples/2-19-24/) |
+| 2-26-24 | Grid | [view](./examples/2-19-24) / [code](https://github.com/mtreanor/computational-art-spring2024/blob/main/examples/2-26-24/) |
 
 ## Potential Topics
 

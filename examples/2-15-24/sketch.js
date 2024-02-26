@@ -1,5 +1,7 @@
 let dots = [];
-let numDots = 10;
+let numDots = 4;
+
+let restLength = 150;
 
 let springs = [];
 
@@ -13,18 +15,21 @@ function setup() {
 
   downwardGravity = createVector(0, 0.38);
   wind = createVector(-0.1, 0);
-  
+
   // Create all the dots
   for (let i = 0; i < numDots; i++) {
-    let x = map(i, 0, numDots, 100, width-100);
-    let y = 100;
-    dots.push(new Dot(x, y, i+1));
+    let x = map(i, 0, numDots, 100, width - 100);
+    let y = random(0, 100);
+    dots.push(new Dot(x, y, i + 1));
   }
 
   // Connect each pair of dots together with a spring
   for (let i = 1; i < dots.length; i++) {
-    springs.push(new Spring(dots[i-1], dots[i], 20, -0.5));
+    springs.push(new Spring(dots[i - 1], dots[i], restLength, -0.5));
   }
+  springs.push(new Spring(dots[3], dots[0], restLength, -0.5));
+  springs.push(new Spring(dots[0], dots[2], restLength, -0.5));
+  springs.push(new Spring(dots[1], dots[3], restLength, -0.5));
 
   background(0, 0, 100);
 }
@@ -34,8 +39,10 @@ function draw() {
 
   // Position the first dot where ever the mouse is. This allows will force the
   // springs to apply all sorts of forces to the dots.
-  dots[0].pos.x = mouseX;
-  dots[0].pos.y = mouseY;
+  if (mouseIsPressed) {
+    dots[0].pos.x = mouseX;
+    dots[0].pos.y = mouseY;
+  }
 
   // Update and draw all the dots
   for (let dot of dots) {
@@ -52,6 +59,6 @@ function draw() {
   // Draw "water". Inside the dot, we apply "drag" force if the dot is overlapping
   noStroke();
   fill(360 * .6, 60, 100, 0.3);
-  rect(0, height/2, width, height/2);
+  rect(0, height / 2, width, height / 2);
 }
 

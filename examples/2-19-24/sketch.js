@@ -11,6 +11,8 @@ function setup() {
   for (let i = 0; i < numSystems; i++) {
     systems.push(new ParticleSystem(random(100, width-100), height));
   }
+
+  
 }
 
 function draw() {
@@ -34,4 +36,10 @@ function draw() {
   strokeWeight(10);
   stroke(0, 0, 100);
   rect(0, 0, width, height);
+}
+
+function keyPressed() {
+  if (key === 's') {
+    saveGif('mySketch', 5);
+  }
 }
