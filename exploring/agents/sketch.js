@@ -1,7 +1,7 @@
 let agents = [];
 let gravity;
 
-let attracter = {};
+let target;
 
 function setup() {
   createCanvas(400, 300);
@@ -9,32 +9,26 @@ function setup() {
   
   gravity = createVector(0, 0.1);
 
-  for (let i = 0; i < 2; i++) {
-    agents.push(new Agent(random(width), random(height)));
-  }
+  target = createVector(100, height/3);
 
-  attracter.pos = createVector(width/2, height/2);
+  for (let i = 0; i < 20; i++) {
+    agents.push(new Agent(random(width), random(height), target));
+  }
 }
 
 function draw() {
   background(0, 0, 100);
 
-  attracter.pos.x = mouseX;
-  attracter.pos.y = mouseY;
-
   for (let agent of agents) {
     agent.update();
     agent.show();
-
-    // F = (G * m1 * m2) / d^2
-    let g = .01;
-    let vec = p5.Vector.sub(attracter.pos, agent.pos);
-    let d = vec.mag();
-    let f = g / d * d;
-    agent.addForce(vec.mult(f));
   }
 
-  fill(100, 100, 100);
-  circle(attracter.pos.x, attracter.pos.y, 10);
+
+  noStroke();
+  fill(200, 100, 100, 0.2);
+  circle(target.x, target.y, 200);
+  fill(200, 100, 100);
+  circle(target.x, target.y, 10);
 }
 

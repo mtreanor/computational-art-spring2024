@@ -1,12 +1,15 @@
 class Agent {
-    constructor(x, y) {
+    constructor(x, y, target) {
         this.pos = createVector(x, y);
         this.vel = createVector(1, 0);
         this.acc = createVector(0, 0);
 
         this.len = 10;
 
-        this.target = createVector(100, height/3);
+        this.maxSpeed = 2;
+        this.maxForce = 0.01;
+
+        this.target = target;
     }
 
     addForce(force) {
@@ -16,9 +19,15 @@ class Agent {
     driveToTarget() {
         let desired = p5.Vector.sub(this.target, this.pos);
 
+        let speed = this.maxSpeed;
+        if (desired.mag() < 200) {
+            speed = map(desired.mag(), 0, 200, 0, this.maxSpeed);
+        } 
+        desired.setMag(speed);
+
         let steer = p5.Vector.sub(desired, this.vel);
-        steer.normalize();
-        steer.mult(0.1);
+
+        steer.limit(this.maxForce);
 
         this.addForce(steer);
     }
@@ -36,14 +45,15 @@ class Agent {
     }
 
     update() {
+
         // this.addForce(gravity);
-        // this.driveToTarget();
+        this.driveToTarget();
 
         this.vel.add(this.acc);
-        this.vel.limit(2);
+        this.vel.limit(1.5);
         this.pos.add(this.vel);
 
-        this.edges();
+        // this.edges();
 
         this.acc.set(0, 0);
     }
