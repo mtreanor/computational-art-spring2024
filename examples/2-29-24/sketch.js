@@ -28,4 +28,3 @@ function draw() {
     vehicle.show();
   }
 }
-
