@@ -9,7 +9,7 @@ class Vehicle {
 
         this.target = target;
         this.maxSpeed = 2;
-        this.maxForce = 0.1;
+        this.maxForce = 0.05;
 
         this.dim = 15 + random(5);
 
