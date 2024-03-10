@@ -1,15 +1,24 @@
 let vehicles = [];
-let numVehicles = 10;
+let numVehicles = 30;
 let target;
 
 let flowField = [];
-let numCellsWidth = 10;
-let numCellsHeight = 10;
+let numCellsWidth = 20;
+let numCellsHeight = 20;
 let cellWidth;
 let cellHeight;
 
+let fishImg;
+
+function preload() {
+  fishImg = loadImage("fish.png");
+}
+
 function setup() {
   createCanvas(600, 600);
+
+  fishImg.resize(50, 50);
+
   colorMode(HSB);
 
   noStroke();
@@ -18,11 +27,18 @@ function setup() {
   cellWidth = width / numCellsWidth;
   cellHeight = height / numCellsHeight;
 
+  let xoff = 0;
+  let yoff = 0;
+  let inc = 0.2;
   for (let xIndex = 0; xIndex < numCellsWidth; xIndex++) {
     flowField[xIndex] = [];
+    yoff = 0;
     for (let yIndex = 0; yIndex < numCellsHeight; yIndex++) {
-      flowField[xIndex][yIndex] = random(2 * PI);
+      let angle = map(noise(xoff, yoff), 0, 1, 0, 2 * PI);
+      flowField[xIndex][yIndex] = new Cell(angle, xIndex, yIndex);
+      yoff += inc;
     }
+    xoff += inc;
   }
   
   target = createVector(width/4, height/2);
@@ -32,28 +48,17 @@ function setup() {
 }
 
 function draw() {
-  background(0, 0, 100 , 1);
+  background(0, 0, 0, 0.1);
 
   target.x = mouseX; 
   target.y = mouseY;
 
-  ellipse(target.x, target.y, 10, 10);
+  //ellipse(target.x, target.y, 10, 10);
 
   for (let xIndex = 0; xIndex < numCellsWidth; xIndex++) {
     for (let yIndex = 0; yIndex < numCellsHeight; yIndex++) {
-      let x = cellWidth * xIndex;
-      let y = cellHeight * yIndex;
-
-      push();
-      translate(x + cellWidth/2, y + cellHeight/2);
-      rotate(flowField[xIndex][yIndex]);
-
-      stroke(0);
-      line(-cellWidth/2, 0, cellWidth/2, 0);
-      line(cellWidth/2, 0, cellWidth/4, -cellHeight/4);
-      line(cellWidth/2, 0, cellWidth/4, cellHeight/4);
-      
-      pop();
+      flowField[xIndex][yIndex].update();
+      flowField[xIndex][yIndex].show();
     }
   }
 
@@ -69,5 +74,14 @@ function positionToFlowFieldIndex(x, y) {
   let yIndex = floor(map(y, 0, height, 0, numCellsHeight));
   yIndex = constrain(yIndex, 0, numCellsHeight-1);
   return createVector(xIndex, yIndex);
+}
+
+function mousePressed() {
+  let arrayIndeces = positionToFlowFieldIndex(mouseX, mouseY);
+  let angle = flowField[arrayIndeces.x][arrayIndeces.y].angle;
+  let vel = p5.Vector.fromAngle(angle);
+  let vehicle = new Vehicle(mouseX, mouseY, target);
+  vehicle.vel = vel;
+  vehicles.push(vehicle);
 }
 

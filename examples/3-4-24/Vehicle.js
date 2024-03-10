@@ -14,10 +14,12 @@ class Vehicle {
         this.dim = 15 + random(5);
 
         this.hue = 0;
-        this.saturation = 0;
-        this.brightness = 0;
+        this.saturation = 70;
+        this.brightness = 100;
 
         this.mass = 1;
+
+        this.ps = new ParticleSystem(this.pos.x, this.pos.y, this);
     }
 
     addForce(force) {
@@ -43,7 +45,7 @@ class Vehicle {
         // 2. Compute the force by seeing the the change is in velocities
         // to move from the current velocity to the desired velocity and limit
         // its magnitude.
-        let force = p5.Vector.sub(desired, this.vel); // THIS SAID VELOCITY!!!
+        let force = p5.Vector.sub(desired, this.vel);
         force.limit(this.maxForce);
 
         // 3. Apple this "steering" force. 
@@ -70,15 +72,27 @@ class Vehicle {
         this.pos.y = (this.pos.y + height) % height;
     }
 
+    flow() {
+        let arrayIndeces = positionToFlowFieldIndex(this.pos.x, this.pos.y);
+        let angle = flowField[arrayIndeces.x][arrayIndeces.y].angle;
+        let force = p5.Vector.fromAngle(angle);
+        force.limit(this.maxForce);
+        this.addForce(force);
+    }
+
     update() {
         // What actions is this agent pursuing?
         // this.flee(this.target);
-        this.seek(this.target, true);
+        // this.seek(this.target, true);
+        this.flow();
 
         // MOVEMENT
         this.vel.add(this.acc); // Apply acceleration (and thus the forces) to vel
         this.vel.limit(this.maxSpeed);
         this.pos.add(this.vel); // Apply velocity to position
+
+        this.ps.pos = this.pos;
+        this.ps.update();
 
         this.wrap();
 
@@ -94,14 +108,21 @@ class Vehicle {
         let angle = this.vel.heading();
         rotate(angle);
 
-        fill(this.hue, this.saturation, this.brightness);
+        let arrayIndeces = positionToFlowFieldIndex(this.pos.x, this.pos.y);
+        let h = flowField[arrayIndeces.x][arrayIndeces.y].hue;
+        h += 180;
+        h = (h + 360) % 360;
+        tint(h, this.saturation, this.brightness);
+
+        imageMode(CENTER);
+        image(fishImg, 0, 0);
 
         // Draw a triangle
-        beginShape();
-        vertex(this.dim, 0);
-        vertex(-this.dim, this.dim/2);
-        vertex(-this.dim, -this.dim/2);
-        endShape(CLOSE);
+        // beginShape();
+        // vertex(this.dim, 0);
+        // vertex(-this.dim, this.dim/2);
+        // vertex(-this.dim, -this.dim/2);
+        // endShape(CLOSE);
 
         pop();
     }
