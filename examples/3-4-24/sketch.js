@@ -10,14 +10,14 @@ let cellHeight;
 
 let fishImg;
 
-function preload() {
-  fishImg = loadImage("fish.png");
-}
+// function preload() {
+//   fishImg = loadImage("fish.png");
+// }
 
 function setup() {
   createCanvas(600, 600);
 
-  fishImg.resize(50, 50);
+  // fishImg.resize(50, 50);
 
   colorMode(HSB);
 

@@ -112,17 +112,17 @@ class Vehicle {
         let h = flowField[arrayIndeces.x][arrayIndeces.y].hue;
         h += 180;
         h = (h + 360) % 360;
-        tint(h, this.saturation, this.brightness);
+        fill(h, this.saturation, this.brightness);
 
-        imageMode(CENTER);
-        image(fishImg, 0, 0);
+        // imageMode(CENTER);
+        // image(fishImg, 0, 0);
 
         // Draw a triangle
-        // beginShape();
-        // vertex(this.dim, 0);
-        // vertex(-this.dim, this.dim/2);
-        // vertex(-this.dim, -this.dim/2);
-        // endShape(CLOSE);
+        beginShape();
+        vertex(this.dim, 0);
+        vertex(-this.dim, this.dim/2);
+        vertex(-this.dim, -this.dim/2);
+        endShape(CLOSE);
 
         pop();
     }
