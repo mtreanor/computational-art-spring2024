@@ -17,7 +17,7 @@ function setup() {
 }
 
 function draw() {
-  background(0, 0, 100);
+  background(0, 0, 1001);
 
   for (let agent of agents) {
     agent.update();
