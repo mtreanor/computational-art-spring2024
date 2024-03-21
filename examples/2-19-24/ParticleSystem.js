@@ -3,8 +3,9 @@ class ParticleSystem {
         this.pos = createVector(x, y);
         this.particles = [];
 
-        this.active = true;
+        this.active = false;
 
+        this.boomHeight = random(0, height / 2);
         this.radius = random(50, 100);
         this.speed = random(-1, -2);
 
@@ -12,6 +13,19 @@ class ParticleSystem {
     }
 
     update() {
+        // Move upward until boomHeight, and then activate the particle instantiation
+        if (this.pos.y < this.boomHeight) {
+            this.active = true;
+        } else {
+            this.pos.x += map(noise((frameCount + this.boomHeight)/50), 0, 1, -2, 2);
+            this.pos.y += this.speed;
+            let r = map(this.pos.y, height, this.boomHeight, this.radius, this.radius/10);
+            // Draw the particle system point when it isn't active (to sort of look like a firework)
+            fill(0, 0, 0, map(this.pos.y, height, this.boomHeight, 1, 0.5));
+            noStroke();
+            ellipse(this.pos.x, this.pos.y, r*2, r*2);
+        }
+
         // If active, create a particle every time update is called
         if (this.active) {
             this.particles.push(new Particle(this.pos.x, this.pos.y, this.hue));
