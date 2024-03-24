@@ -16,7 +16,7 @@ function setup() {
 }
 
 function draw() {
-  background(0, 0, 100);
+  background(0, 0, 100, 0.01);
 
   target.x = mouseX; 
   target.y = mouseY;
@@ -26,5 +26,9 @@ function draw() {
   for (let vehicle of vehicles) {
     vehicle.update();
     vehicle.show();
+    vehicle.wrap();
   }
+
+  // fill(0, 0, 100);
+  // rect(0, 0, width, 20);
 }

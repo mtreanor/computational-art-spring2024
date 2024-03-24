@@ -11,15 +11,17 @@ class Vehicle {
         this.maxSpeed = 5;
         this.maxForce = 0.05;
 
-        this.dim = 15 + random(5);
+        this.dim = 0 + random(5);
 
-        this.hue = 170;
+        this.hue = random(100, 200);
         this.saturation = 70;
-        this.brightness = 100;
+        this.brightness = 80;
 
         this.range = 100;
 
         this.mass = 1;
+
+        background(0, 0, 100);
     }
 
     addForce(force) {
@@ -59,7 +61,7 @@ class Vehicle {
         this.pos.y = (this.pos.y + height) % height;
     }
 
-    cohesion() {
+    getCloseVehicles() {
         let closeVehicles = [];
         for (let vehicle of vehicles) {
             if (vehicle !== this) {
@@ -68,32 +70,95 @@ class Vehicle {
                 }
             }
         }
+        return closeVehicles;
+    }
+
+    cohesion(closeVehicles) {
         if (closeVehicles.length > 0) {
             let sumPositions = createVector(0, 0);
-            for (let vehicle in closeVehicles) {
+            for (let vehicle of closeVehicles) {
                 sumPositions.add(vehicle.pos);
             }
             sumPositions.div(closeVehicles.length);
-            return sumPositions;
+
+            let desired = p5.Vector.sub(sumPositions, this.pos);
+            desired.setMag(this.maxSpeed);
+            let steeringForce = p5.Vector.sub(desired, this.vel);
+            steeringForce.limit(this.maxForce);
+            return steeringForce;
+            
         }
 
-        return this.pos;
+        return createVector(0,0);
+    }
+
+    separation(closeVehicles) {
+        let sumOfAnglesToVehicles = createVector(0, 0);
+        for (let vehicle of closeVehicles) {
+            let dirToVehicle = p5.Vector.sub(vehicle.pos, this.pos);
+            sumOfAnglesToVehicles.add(dirToVehicle);
+        }
+        if (closeVehicles.length !== 0) {
+            sumOfAnglesToVehicles.div(closeVehicles.length);
+        }
+        sumOfAnglesToVehicles.setMag(this.maxSpeed);
+        sumOfAnglesToVehicles.mult(-1);
+        
+        // compute steering force
+        let steeringForce = p5.Vector.sub(sumOfAnglesToVehicles, this.vel);
+        steeringForce.limit(this.maxForce);
+
+        return steeringForce;
+    }
+
+    alignment(closeVehicles) {
+        let sumOfVelocities = createVector(0, 0);
+        for (let vehicle of closeVehicles) {
+            sumOfVelocities.add(vehicle.vel);
+        }
+        if (closeVehicles.length > 0) {
+            sumOfVelocities.div(closeVehicles.length);
+        }
+        sumOfVelocities.setMag(this.maxSpeed);
+        
+        // compute steering force
+        let steeringForce = p5.Vector.sub(sumOfVelocities, this.vel);
+        steeringForce.limit(this.maxForce);
+
+        return steeringForce;
     }
 
 
+
     update() {
-        // What actions is this agent pursuing?
-        let cohesionPoint = this.cohesion();
-        if (cohesionPoint) {
-            this.seek(cohesionPoint);
+        if (mouseIsPressed) {
+            let mousePos = createVector(mouseX, mouseY);
+            this.seek(mousePos);
+        } else {
+            let closeVehicles = this.getCloseVehicles();
+            // What actions is this agent pursuing?
+            let cohesionForce = this.cohesion(closeVehicles);
+            cohesionForce.mult(1);
+            this.addForce(cohesionForce);
+
+            let separationForce = this.separation(closeVehicles);
+            separationForce.mult(1);
+            this.addForce(separationForce);
+
+            let alignmentForce = this.alignment(closeVehicles);
+            let n = noise(frameCount * 0.1);
+            console.log(n);
+            alignmentForce.mult(n);
+            this.addForce(alignmentForce);
         }
+
+        this.dim = map(this.pos.y, 0, height, 2, 20)
+
 
         // MOVEMENT
         this.vel.add(this.acc); // Apply acceleration (and thus the forces) to vel
         this.vel.limit(this.maxSpeed);
         this.pos.add(this.vel); // Apply velocity to position
-
-        this.wrap();
 
         this.acc.set(0,0);
     }
@@ -105,7 +170,7 @@ class Vehicle {
 
         // fill(0, 0, 10, 0.08);
         // noStroke();
-        // ellipse(0, 0, this.range * 2);
+        // ellipse(0, 0, this.range);
 
         // Heading is the amount of rotation
         let angle = this.vel.heading();
