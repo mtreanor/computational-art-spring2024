@@ -1,5 +1,4 @@
 let count = 0;
-let branchRand;
 
 function setup() {
   createCanvas(600, 400);
@@ -9,12 +8,9 @@ function setup() {
   // drawCircle(width/2, height/2, 400);
   // console.log(count);
 
-  background(0, 0, 100);
-
-  branchRand = random();
-  
-
+  background(0, 0, 100);  
 }
+
 
 function branch(l) {
   count++;
@@ -37,16 +33,19 @@ function branch(l) {
     branch(l);
     pop();
   } else {
-    // fill(random(360), 60, 100);
-    // noStroke();
+    
     ellipse(0, 0, 50);
   }
 }
 
 function draw() {
-  background(0, 0, 100);
-
+  // background(0, 0, 0, 0.01);
+  // translate(width/2, height/2);
+  // rotate(frameCount * 0.004);
   count = 0;
+  // drawCircle(0, 0, 400 + sin(frameCount * 0.01) * 200)
+
+  // count = 0;
   translate(width/2, height);
   branch(150);
 }
@@ -54,16 +53,22 @@ function draw() {
 
 function drawCircle(x, y, w) {
 
-  stroke(map(count, 0, 100000, 0, 360), 60, 100); 
+  noFill();
+  stroke(map(count, 0, 100, 0, 360), 60, 100); 
   ellipse(x, y, w);
 
   count++;
 
-  if (w > 5) {
-    drawCircle(x, y, w/2);
-    drawCircle(x-50, y, w/2);
-    drawCircle(x+50, y, w/2);
-    drawCircle(x, y+50, w/2);
-    drawCircle(x, y-50, w/2);
+  w *= 0.5;
+
+  // console.log(count);
+  // if (count > 10000) return;
+
+  if (w > 100) {
+    drawCircle(x, y, w);
+    drawCircle(x-15, y, w / (1+ noise(frameCount* 0.01)));
+    drawCircle(x+15, y, w / (1+ noise(frameCount* 0.01)));
+    drawCircle(x, y+50, w);
+    drawCircle(x, y-50, w);
   }
 }

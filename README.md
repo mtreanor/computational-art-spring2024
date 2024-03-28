@@ -50,6 +50,7 @@ This course surveys a variety of tools and techniques used for creating artworks
 | 3-18-24 | Basic Vehicle Example | [view](./examples/3-18-24_basic-vehicle-example) / [code](https://github.com/mtreanor/computational-art-spring2024/blob/main/examples/3-18-24_basic-vehicle-example/) |
 | 3-18-24 and 3-21-24 | Autonomous Agents pt 3. Combining Steering Behaviors (flocking, aka boids) | [view](./examples/3-18-24) / [code](https://github.com/mtreanor/computational-art-spring2024/blob/main/examples/3-18-24) |
 | 3-25-24 | Trees, Fractals, and Recusion | [view](./examples/3-25-24) / [code](https://github.com/mtreanor/computational-art-spring2024/blob/main/examples/3-25-24) |
+| 3-28-24 | Cool circles, and Koch Curves | [view](./examples/3-28-24) / [code](https://github.com/mtreanor/computational-art-spring2024/blob/main/examples/3-28-24) |
 
 ## Potential Topics
 
