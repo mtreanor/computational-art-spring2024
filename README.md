@@ -30,7 +30,8 @@ This course surveys a variety of tools and techniques used for creating artworks
 | 3. [Physics](./assignments/physics.html) | 2-19-24 |
 | 4. [Particles](./assignments/particles.html) | 2-26-24 |
 | 5. [Grid](./assignments/grid.html) | 2-29-24 |
-| 5. [Ecosystem](./assignments/ecosystem.html) | 3-28-24 |
+| 6. [Ecosystem](./assignments/ecosystem.html) | 3-28-24 |
+| 7. [Fractals](./assignments/fractals.html) | 4-4-24 |
 
 ## Examples
 
