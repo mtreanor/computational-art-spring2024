@@ -20,10 +20,6 @@ function preload() {
 function setup() {
   createCanvas(600, 400);
   colorMode(HSB);
-
-  synth = new p5.PolySynth();
-
-  loop = new p5.SoundLoop(soundLoop, loopInterval/4);
   
   // frameRate(5);
 
@@ -60,5 +56,10 @@ function soundLoop(timeFromNow) {
 
 function mousePressed() {
   userStartAudio();
+
+  synth = new p5.PolySynth();
+
+  loop = new p5.SoundLoop(soundLoop, loopInterval/4);
+
   loop.start(); 
 }
