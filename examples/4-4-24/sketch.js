@@ -14,7 +14,7 @@ let scale = "dorian";
 let loopInterval = 1; // Loop interval of 1 second corresponds to 60 BPM
 
 function preload() {
-  kickSample = loadSound("./samples/kick.wav");
+  kickSample = loadSound("http://mtreanor.com/computational-art-spring2024/examples/4-4-24/samples/kick.wav");
 }
 
 function setup() {
