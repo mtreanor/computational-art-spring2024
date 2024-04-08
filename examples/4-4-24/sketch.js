@@ -10,7 +10,6 @@ let note = 0;
 let sixteenth = 0;
 
 let scale = "dorian";
-let delay;
 
 let loopInterval = 1; // Loop interval of 1 second corresponds to 60 BPM
 

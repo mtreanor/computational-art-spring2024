@@ -1,16 +1,21 @@
-let prevTimeStamp;
-
 let kickSample;
 
 let synth;
+
 let loop;
 
-let note = 0;
+let delay;
+let reverb;
 
 let sixteenth = 0;
 
-let scale = "dorian";
-let delay;
+let kickSequence = [1,0,0,1,0,0,1,0];
+
+let majorArpeggio = [0, 4, 7, 11];
+
+let root = 48;
+let scale = "major";
+
 
 let loopInterval = 1; // Loop interval of 1 second corresponds to 60 BPM
 
@@ -24,42 +29,50 @@ function setup() {
 
   synth = new p5.PolySynth();
 
-  loop = new p5.SoundLoop(soundLoop, loopInterval/4);
-  
-  // frameRate(5);
+  reverb = new p5.Reverb();
+  reverb.process(synth, 10, 2);
 
-  lastTime = millis();
+  delay = new p5.Delay();
+  delay.process(synth, 0.4, 0.2, 2300);
+
+  loop = new p5.SoundLoop(soundLoop, loopInterval/4);
 }
 
 function draw() {
   background(0, 0, 100);
 
-  let deltaTime = millis() - prevTimeStamp;
-  // console.log(deltaTime);
-
-  prevTimeStamp = millis();
 }
 
 function soundLoop(timeFromNow) {
-  if (sixteenth % 4 === 0) {
+  if (sixteenth % 8 === 0) {
+    if (root === 48) {
+      root += 5;
+    } else {
+      root -= 5;
+    }
+  }
+
+
+  let kickIndex = sixteenth % kickSequence.length;
+  if (kickSequence[kickIndex] === 1) {
     kickSample.play(timeFromNow);
   }
 
-  note = floor(random(0, scales[scale].length));
+  // let noteOffset = sixteenth + floor(random(-2, 2));
+  // let scaleIndex = noteOffset % scales[scale].length;
+  // let note = midiToFreq(root + scales[scale][scaleIndex]);
+  // if (random() > 0.3) {
+  //   synth.play(note, 0.8, timeFromNow, 0.1);
+  // }
 
-  if (random() < 0.5) {
-    synth.play(midiToFreq(60 + scales[scale][note]), random(0.1, 0.9), timeFromNow, random(0.1, 0.4));
-    if (random() < 0.2) {
-      synth.play(midiToFreq(60 + scales[scale][note] + 3), random(0.1, 0.9), timeFromNow, random(0.1, 0.4));
-    }
-  }
-  note++;
-  note = note % 8;
+  let arpIndex = sixteenth % majorArpeggio.length;
+  let note = midiToFreq(root + majorArpeggio[arpIndex]);
+  synth.play(note, 0.8, timeFromNow, 0.1);
 
   sixteenth++;
 }
 
 function mousePressed() {
   userStartAudio();
-  loop.start(); 
+  loop.start();
 }
