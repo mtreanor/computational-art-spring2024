@@ -18,14 +18,11 @@ let scale = "major";
 
 let hue;
 
-let anotherSample;
-
-
 let loopInterval = 1; // Loop interval of 1 second corresponds to 60 BPM
 
 function preload() {
-  kickSample = loadSound("https://mtreanor.github.io/computational-art-spring2024/examples/4-8-24/samples/kick.wav");
-  // kickSample = loadSound("./samples/kick.wav");
+  // kickSample = loadSound("https://mtreanor.github.io/computational-art-spring2024/examples/4-8-24/samples/kick.wav");
+  kickSample = loadSound("./samples/kick.wav");
 }
 
 
