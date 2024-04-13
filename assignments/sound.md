@@ -10,10 +10,11 @@ Create a sketch that creates interesting sounds and/or music.
 1. Some sounds should be played based on either some sort of user interaction, or as a result of the interaction between the visuals (e.g. play a note when two shapes collide).
 
 ## Note
-- In order for your samples (sound files) to be played, you will need to upload your sounds to github, and refer to web url, rather than the relative path. 
+- In class on 4-11-24 I said that in order to get your sounds to work you would need upload the sound to github, and link to it like this:
 ```
 https://YOUR_GIHUB_USERNAME.github.io/computational-art-spring2024/assignments/08_sound/samples/soundFile.wav
 ```
+It turns out it just works with providing relative paths. The reason I thought you had to provide the web link was because of somethign specific to my github setup.
 
 ## Turning in your assignment
 
