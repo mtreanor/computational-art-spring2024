@@ -1,4 +1,4 @@
-# Assignment 5: The Ecosystem Project
+# Assignment 6: The Ecosystem Project
 
 **Name your project folder `06_ecosystem`.**
 

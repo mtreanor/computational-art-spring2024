@@ -32,6 +32,7 @@ This course surveys a variety of tools and techniques used for creating artworks
 | 5. [Grid](./assignments/grid.html) | 2-29-24 |
 | 6. [Ecosystem](./assignments/ecosystem.html) | 3-28-24 |
 | 7. [Fractals](./assignments/fractals.html) | 4-4-24 |
+| 8. [Sound](./assignments/sound.html) | 4-18-24 |
 
 ## Examples
 

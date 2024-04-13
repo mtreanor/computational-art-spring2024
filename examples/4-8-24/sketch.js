@@ -16,12 +16,18 @@ let majorArpeggio = [0, 4, 7, 11];
 let root = 48;
 let scale = "major";
 
+let hue;
+
+let anotherSample;
+
 
 let loopInterval = 1; // Loop interval of 1 second corresponds to 60 BPM
 
 function preload() {
   kickSample = loadSound("https://mtreanor.github.io/computational-art-spring2024/examples/4-8-24/samples/kick.wav");
+  // kickSample = loadSound("./samples/kick.wav");
 }
+
 
 function setup() {
   createCanvas(600, 400);
@@ -35,11 +41,16 @@ function setup() {
   delay = new p5.Delay();
   delay.process(synth, 0.4, 0.2, 2300);
 
+  // kickSample.playMode("restart");
+
   loop = new p5.SoundLoop(soundLoop, loopInterval/4);
 }
 
 function draw() {
   background(0, 0, 100);
+
+  fill(hue, 60, 100);
+  circle(width/2, height/2, 200);
 
 }
 
@@ -50,7 +61,12 @@ function soundLoop(timeFromNow) {
     } else {
       root -= 5;
     }
+
+
+    hue = random(360);
   }
+
+  // hue = random(360);
 
 
   let kickIndex = sixteenth % kickSequence.length;
@@ -74,5 +90,6 @@ function soundLoop(timeFromNow) {
 
 function mousePressed() {
   userStartAudio();
+
   loop.start();
 }

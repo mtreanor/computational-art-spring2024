@@ -2,7 +2,7 @@
 
 **Name your project folder `07_fractals`.**
 
-Creeate a piece of computational art that makes use of recusion to create an interesting sketch that would be difficult to do without using recursion (it does't necessarily have to be fractal, but give it a shot!).
+Create a piece of computational art that makes use of recusion to create an interesting sketch that would be difficult to do without using recursion (it does't necessarily have to be fractal, but give it a shot!).
 
 Here are a series of steps and tips that may help you create somethign interesting:
 
