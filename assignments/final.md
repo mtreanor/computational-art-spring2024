@@ -8,7 +8,7 @@ Now that we have covered a wide range of topics, the goal of the final is to cre
 
 In addition, rather than simply solely making use of the primitive drawing functions as we have for most of the class, you are required to **make use of at least three of the following types of media**: images, audio/music, video, natural language processing/generation, web cams, or something else we haven't covered such as 3D (at your own risk).
 
-As this is the culmination of your semester of work, spend time *refining* what you have made. In other words, are the interesting aspects of your project "legible" (i.e. avoid jumbled chaos). Is there a temporal element to your project (i.e. is there interesting interesting to interact with, or does it evolve over time in interesting ways?). Spend time on color choice. Remember that you can use (color pallettes)[https://coolors.co/]. Spend time to make your shapes, whether meant to represent something or not, look intentional (i.e. don't try to build a cat out of ellipses, unless you are very dedicated, or your project as a consistent "bad art" style - that could be cool).
+As this is the culmination of your semester of work, spend time *refining* what you have made. In other words, are the interesting aspects of your project "legible" (i.e. avoid jumbled chaos). Is there a temporal element to your project (i.e. is there interesting interesting to interact with, or does it evolve over time in interesting ways?). Spend time on color choice. Remember that you can use [color pallettes](https://coolors.co/). Spend time to make your shapes, whether meant to represent something or not, look intentional (i.e. don't try to build a cat out of ellipses, unless you are very dedicated, or your project as a consistent "bad art" style - that could be cool).
 
 ## Requirements
 1. Your project turned in as described below
@@ -18,7 +18,7 @@ As this is the culmination of your semester of work, spend time *refining* what 
 1. ***ALL COPIED OR GENERATED CODE MUST BE ACKNOWLEDGED AS A COMMENT INSIDE YOUR CODE***
 
 ## README.md File
-In addition to your submission, you must provide a file named `README.md` that provides information about your project. The text in your `README.md` should be written using the (Markdown syntax)[https://www.markdownguide.org/cheat-sheet/]. The following information needs to be included:
+In addition to your submission, you must provide a file named `README.md` that provides information about your project. The text in your `README.md` should be written using the [Markdown syntax](https://www.markdownguide.org/cheat-sheet/). The following information needs to be included:
 
 1. **TITLE:**A title for your project
 1. **LINK:** Your project should be accessible by going to the link referenced in the "Turning in your assignment" section below.
