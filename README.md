@@ -56,6 +56,7 @@ This course surveys a variety of tools and techniques used for creating artworks
 | 4-4-24 | Sound part 1 | [view](https://mtreanor.com/computational-art-spring2024/examples/4-4-24/) / [code](https://github.com/mtreanor/computational-art-spring2024/blob/main/examples/4-4-24) |
 | 4-8-24 | Sound part 2 | [view](https://mtreanor.com/computational-art-spring2024/examples/4-8-24/) / [code](https://github.com/mtreanor/computational-art-spring2024/blob/main/examples/4-8-24) |
 | 4-15-24 | Sound part 3 | [view](https://mtreanor.com/computational-art-spring2024/examples/4-15-24/) / [code](https://github.com/mtreanor/computational-art-spring2024/blob/main/examples/4-15-24) |
+| 4-18-24 | Cellular Automata, Game of Life | [view](https://mtreanor.com/computational-art-spring2024/examples/4-18-24/) / [code](https://github.com/mtreanor/computational-art-spring2024/blob/main/examples/4-18-24) |
 
 ## Potential Topics
 
