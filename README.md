@@ -33,6 +33,7 @@ This course surveys a variety of tools and techniques used for creating artworks
 | 6. [Ecosystem](./assignments/ecosystem.html) | 3-28-24 |
 | 7. [Fractals](./assignments/fractals.html) | 4-4-24 |
 | 8. [Sound](./assignments/sound.html) | 4-18-24 |
+| 9. [Final](./assignments/final.html) | Mon, May 6, 2024	11:20AM-01:50PM (meeting on zoom) |
 
 ## Examples
 
