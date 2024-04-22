@@ -50,18 +50,22 @@ class Cell {
     }
 
     show() {
-        // if (this.alive) {
-        //     fill(0, 0, 100);
-        // } else {
-        //     fill(0, 0, 0);
-        // }
-        fill((200+this.aliveCount) % 360, 60, 100);
-        stroke((200+this.aliveCount + 30) % 360, 90, 100, 0.3);
-        strokeWeight(3);
+        if (this.alive) {
+            fill(0, 0, 100);
+        } else {
+            fill(0, 0, 0);
+        }
+        fill((200 + this.aliveCount) % 360, 60, 100);
+        stroke((230+this.aliveCount) % 360, 90, 100, 0.3);
+        strokeWeight(5);
         let x = this.indexX * cellWidth;
-        x += 2*cos(frameCount*0.05 + sin(frameCount * 0.01)*3*PI*this.indexX/grid.length);
+        let offsetX = map(this.indexX, 0, grid.length, 0, 2 * PI);
+        x += cos(offsetX + frameCount * 0.1) * 2;
+        // x += 2*cos(frameCount*0.05 + sin(frameCount * 0.01)*3*PI*this.indexX/grid.length);
         let y = this.indexY * cellHeight;
-        y += 2*sin(frameCount*0.05 + sin(frameCount * 0.01)*3*PI*this.indexX/grid[0].length);
+        let offsetY = map(this.indexY, 0, grid[this.indexX].length, 0, 2 * PI);
+        y += sin(offsetY + frameCount * 0.05) * 2;
+        // y += 2*sin(frameCount*0.05 + sin(frameCount * 0.01)*3*PI*this.indexX/grid[0].length);
         rect(x, y, cellWidth, cellHeight);
     }
 }
