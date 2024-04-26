@@ -4,6 +4,9 @@ let imgHeight = 28;
 
 let pixelDimension;
 
+// NOTE: If you want to do cool pixel stuff with an image, you can just load one in
+// and treat it the same as this camera example. (i.e. img variable can hold either
+// a camera video or a loaded image).
 // function preload() {
    // img = loadImage("./frog.png"); // 20 by 14
 // }
