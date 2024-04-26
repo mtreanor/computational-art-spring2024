@@ -1,7 +1,7 @@
 let grid = [];
 
-let cellCountX = 100;
-let cellCountY = 100;
+let cellCountX = 30;
+let cellCountY = 30;
 
 let cellWidth;
 let cellHeight;
